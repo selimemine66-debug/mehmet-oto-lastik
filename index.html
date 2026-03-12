@@ -7,32 +7,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
 * {margin:0;padding:0;box-sizing:border-box;font-family:'Roboto', sans-serif;}
-body {background:#111;color:white;overflow-x:hidden;}
-header{position:relative;height:100vh;background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1519750783826-e2420f4d687f'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; text-align:center;}
-header h1{font-size:60px;margin-bottom:10px; animation:fadeIn 2s ease forwards;}
-header p{font-size:22px;margin-bottom:20px; animation:fadeIn 3s ease forwards;}
-.btn{padding:15px 30px;background:#ff3c00;color:white;text-decoration:none;border-radius:8px;font-size:18px;transition:0.3s;display:inline-block;}
+body {background:#fff;color:#111;overflow-x:hidden;position:relative;}
+
+/* Arka plandaki dönen lastikler */
+.tire-bg {position:absolute;width:100%;height:100%;top:0;left:0;overflow:hidden;z-index:0;}
+.tire-bg img {position:absolute;width:80px;opacity:0.2;animation:spin 20s linear infinite;}
+.tire-bg img:nth-child(1){top:10%;left:5%;animation-duration:25s;}
+.tire-bg img:nth-child(2){top:30%;left:70%;animation-duration:30s;}
+.tire-bg img:nth-child(3){top:60%;left:20%;animation-duration:22s;}
+.tire-bg img:nth-child(4){top:80%;left:80%;animation-duration:28s;}
+
+@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+
+header{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;z-index:1;}
+header h1{font-size:60px;margin-bottom:10px;animation:fadeIn 2s ease forwards;}
+header p{font-size:22px;margin-bottom:20px;animation:fadeIn 3s ease forwards;}
+.btn{padding:15px 30px;background:#ff3c00;color:white;text-decoration:none;border-radius:8px;font-size:18px;transition:0.3s;display:inline-block;z-index:1;position:relative;}
 .btn:hover{background:#ff6a00;transform:scale(1.05);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-section{padding:70px 20px;text-align:center;}
+
+section{padding:70px 20px;text-align:center;position:relative;z-index:1;}
 .services{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:40px;}
-.card{background:#1c1c1c;padding:30px;width:280px;border-radius:12px;transition:0.3s;position:relative;}
+.card{background:#1c1c1c;color:white;padding:30px;width:280px;border-radius:12px;transition:0.3s;position:relative;}
 .card:hover{transform:translateY(-10px);background:#242424;}
 .card h3{color:#ff3c00;margin-bottom:10px;}
 .price{font-size:30px;color:#00ffa6;margin-top:10px;}
 .tire{width:120px;margin:40px auto;animation:spin 5s linear infinite;}
-@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-size:18px;box-shadow:0 0 10px rgba(0,0,0,0.5);}
-footer{background:black;padding:20px;text-align:center;font-size:14px;}
 .testimonials{margin-top:50px;}
 .testimonials h2{margin-bottom:20px;}
-.testimonials .testimonial{background:#222;padding:20px;margin:10px auto;border-radius:10px;max-width:500px;position:relative;animation:fadeUp 1.5s ease forwards;}
+.testimonials .testimonial{background:#222;color:white;padding:20px;margin:10px auto;border-radius:10px;max-width:500px;position:relative;animation:fadeUp 1.5s ease forwards;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 .map-container{margin-top:50px;display:flex;justify-content:center;}
 .map-container iframe{border:0;width:100%;max-width:600px;height:350px;border-radius:12px;}
+footer{background:#111;color:white;padding:20px;text-align:center;font-size:14px;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-size:18px;box-shadow:0 0 10px rgba(0,0,0,0.5);}
 </style>
 </head>
 <body>
+
+<!-- Arka plan lastikleri -->
+<div class="tire-bg">
+<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
+<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
+<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
+<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
+</div>
 
 <header>
 <div>
@@ -44,7 +63,7 @@ footer{background:black;padding:20px;text-align:center;font-size:14px;}
 
 <section>
 <h2>Hizmetlerimiz</h2>
-<img class="tire" src="https://cdn-icons-png.flaticon.com/512/743/743922.png">
+<img class="tire" src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
 <div class="services">
 <div class="card">
 <h3>Lastik Patlak Tamiri</h3>
@@ -73,7 +92,7 @@ footer{background:black;padding:20px;text-align:center;font-size:14px;}
 <h2>İletişim</h2>
 <p style="margin-top:20px;">📞 Telefon: 0537 342 41 73</p>
 <p>📍 Hatay / Antakya</p>
-<a class="btn" href="tel:+905373424173">Hemen Ara</a>
+<a class="btn" href="tel:+905373424273">Hemen Ara</a>
 </section>
 
 <section class="map-container">
@@ -84,7 +103,7 @@ footer{background:black;padding:20px;text-align:center;font-size:14px;}
 © 2026 Mehmet Oto Lastik | 7/24 Yol Yardımı
 </footer>
 
-<a class="whatsapp" href="https://wa.me/905000000000">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/905373424173">WhatsApp</a>
 
 </body>
 </html>
