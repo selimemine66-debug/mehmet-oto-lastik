@@ -8,12 +8,12 @@
 body {
   margin:0;
   font-family:sans-serif;
-  background:white;
   overflow-x:hidden;
+  background: linear-gradient(to bottom, #fdfdfd, #f7f7f7);
   position:relative;
 }
 
-/* Arka planda dönen lastikler */
+/* Arka plan lastikleri */
 .tire-bg {
   position:fixed;
   top:0; left:0;
@@ -23,22 +23,26 @@ body {
 }
 .tire-bg img {
   position:absolute;
-  width:100px;
-  opacity:0.2;
-  animation:spin linear infinite;
+  width:80px;
+  opacity:0.3;
+  animation:spin linear infinite, floatUpDown ease-in-out infinite;
 }
-.tire-bg img:nth-child(1){top:10%; left:5%; animation-duration:20s;}
-.tire-bg img:nth-child(2){top:30%; left:70%; animation-duration:25s;}
-.tire-bg img:nth-child(3){top:60%; left:20%; animation-duration:22s;}
-.tire-bg img:nth-child(4){top:80%; left:80%; animation-duration:28s;}
-.tire-bg img:nth-child(5){top:50%; left:50%; animation-duration:30s;}
+.tire-bg img:nth-child(1){top:10%; left:5%; animation-duration:22s, 6s;}
+.tire-bg img:nth-child(2){top:30%; left:70%; animation-duration:28s, 5s;}
+.tire-bg img:nth-child(3){top:60%; left:20%; animation-duration:25s, 7s;}
+.tire-bg img:nth-child(4){top:80%; left:80%; animation-duration:30s, 6.5s;}
+.tire-bg img:nth-child(5){top:50%; left:50%; animation-duration:26s, 5.5s;}
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-20px);}
 }
 
-/* Header ve içerik */
+/* Header */
 header {
   position:relative;
   text-align:center;
@@ -48,14 +52,8 @@ header {
   justify-content:center;
   z-index:1;
 }
-header h1 {
-  font-size:50px;
-  margin-bottom:10px;
-}
-header p {
-  font-size:22px;
-  margin-bottom:20px;
-}
+header h1 { font-size:50px; margin-bottom:10px;}
+header p { font-size:22px; margin-bottom:20px;}
 .btn {
   padding:15px 30px;
   background:#ff3c00;
@@ -68,26 +66,9 @@ header p {
 .btn:hover { background:#ff6a00; transform:scale(1.05); }
 
 /* Bölümler */
-section {
-  padding:70px 20px;
-  text-align:center;
-  z-index:1;
-  position:relative;
-}
-.services {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
-}
-.card {
-  background:#1c1c1c;
-  color:white;
-  padding:30px;
-  width:280px;
-  border-radius:12px;
-  transition:0.3s;
-}
+section {padding:70px 20px; text-align:center; position:relative; z-index:1;}
+.services {display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:40px;}
+.card {background:#1c1c1c; color:white; padding:30px; width:280px; border-radius:12px; transition:0.3s; position:relative;}
 .card:hover { transform:translateY(-10px); background:#242424; }
 .card h3 { color:#ff3c00; margin-bottom:10px; }
 .price { font-size:30px; color:#00ffa6; margin-top:10px; }
@@ -99,15 +80,6 @@ section {
   margin:10px auto;
   border-radius:10px;
   max-width:500px;
-}
-
-.map-container iframe {
-  border:0;
-  width:100%;
-  max-width:600px;
-  height:350px;
-  border-radius:12px;
-  margin-top:50px;
 }
 
 footer {
@@ -134,7 +106,7 @@ footer {
 </head>
 <body>
 
-<!-- Arka plandaki lastikler -->
+<!-- Arka plan lastikleri -->
 <div class="tire-bg">
 <img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
 <img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
@@ -178,12 +150,8 @@ footer {
 <section>
 <h2>İletişim</h2>
 <p>📞 Telefon: 0537 342 41 73</p>
-<p>📍 Hatay / Antakya, kuzeytepe mh.</p>
+<p>📍 Hatay / Antakya, Kuzeytepe mh.</p>
 <a class="btn" href="tel:+905373424173">Hemen Ara</a>
-</section>
-
-<section class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.390803923784!2d36.20134531514251!3d36.16042027998954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1525c5e0f4a6e1e7%3A0x123456789abcdef!2sHatay%2C%20Turkey!5e0!3m2!1sen!2sus!4v1619999999999!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
 </section>
 
 <footer>
