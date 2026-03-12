@@ -1,16 +1,223 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mehmet Oto Lastik</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mehmet Oto Lastik | 7/24 Yol Yardımı</title>
+
 <style>
-  body { background: #111; color: white; font-family: Arial, sans-serif; text-align: center; padding: 40px; }
-  h1 { color: #e60000; }
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+/* HEADER */
+
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1519750783826-e2420f4d687f");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+header h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.btn{
+padding:15px 30px;
+background:#ff3c00;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:18px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff6a00;
+}
+
+/* SERVICES */
+
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#1c1c1c;
+padding:30px;
+width:260px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#242424;
+}
+
+.card h3{
+color:#ff3c00;
+margin-bottom:10px;
+}
+
+.price{
+font-size:30px;
+color:#00ffa6;
+margin-top:10px;
+}
+
+/* LASTIK ANIMASYONU */
+
+.tire{
+width:120px;
+margin:40px auto;
+animation:spin 5s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:20px;
+text-align:center;
+font-size:14px;
+}
+
 </style>
 </head>
+
 <body>
-  <h1>Mehmet Oto Lastik</h1>
-  <p>7/24 Yol Yardımı Hizmetinizde!</p>
+
+<header>
+
+<div>
+
+<h1>Mehmet Oto Lastik</h1>
+
+<p>7/24 Yol Yardımı • Hızlı Lastik Tamiri</p>
+
+<a class="btn" href="tel:+905000000000">Hemen Ara</a>
+
+</div>
+
+</header>
+
+<section>
+
+<h2>Hizmetlerimiz</h2>
+
+<img class="tire" src="https://cdn-icons-png.flaticon.com/512/743/743922.png">
+
+<div class="services">
+
+<div class="card">
+<h3>Lastik Patlak Tamiri</h3>
+<p>Profesyonel ekipman ile hızlı onarım.</p>
+<div class="price">250 TL</div>
+</div>
+
+<div class="card">
+<h3>7/24 Yol Yardımı</h3>
+<p>Gece gündüz yolda kaldığınızda geliyoruz.</p>
+</div>
+
+<div class="card">
+<h3>Lastik Değişimi</h3>
+<p>Hızlı ve güvenli lastik değişim hizmeti.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Neden Bizi Seçmelisiniz?</h2>
+
+<p style="margin-top:20px; line-height:2;">
+✔ 7/24 Hizmet<br>
+✔ Uygun Fiyat<br>
+✔ Hızlı Müdahale<br>
+✔ Profesyonel Ekip
+</p>
+
+</section>
+
+<section>
+
+<h2>İletişim</h2>
+
+<p style="margin-top:20px;">
+📞 Telefon: 0500 000 00 00
+</p>
+
+<p>
+📍 Hatay / Türkiye
+</p>
+
+<br>
+
+<a class="btn" href="tel:+905000000000">Hemen Ara</a>
+
+</section>
+
+<footer>
+
+© 2026 Mehmet Oto Lastik | 7/24 Yol Yardımı
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/905000000000">WhatsApp</a>
+
 </body>
 </html>
