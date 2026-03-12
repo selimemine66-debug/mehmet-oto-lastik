@@ -4,217 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mehmet Oto Lastik | 7/24 Yol Yardımı</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-background:#111;
-color:white;
-}
-
-/* HEADER */
-
-header{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url("https://images.unsplash.com/photo-1519750783826-e2420f4d687f");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-
-header h1{
-font-size:60px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:22px;
-margin-bottom:20px;
-}
-
-.btn{
-padding:15px 30px;
-background:#ff3c00;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#ff6a00;
-}
-
-/* SERVICES */
-
-section{
-padding:70px 20px;
-text-align:center;
-}
-
-.services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-}
-
-.card{
-background:#1c1c1c;
-padding:30px;
-width:260px;
-border-radius:12px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-background:#242424;
-}
-
-.card h3{
-color:#ff3c00;
-margin-bottom:10px;
-}
-
-.price{
-font-size:30px;
-color:#00ffa6;
-margin-top:10px;
-}
-
-/* LASTIK ANIMASYONU */
-
-.tire{
-width:120px;
-margin:40px auto;
-animation:spin 5s linear infinite;
-}
-
-@keyframes spin{
-0%{transform:rotate(0deg);}
-100%{transform:rotate(360deg);}
-}
-
-/* WHATSAPP BUTTON */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-size:18px;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
-}
-
-/* FOOTER */
-
-footer{
-background:black;
-padding:20px;
-text-align:center;
-font-size:14px;
-}
-
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Roboto', sans-serif;}
+body {background:#111;color:white;overflow-x:hidden;}
+header{position:relative;height:100vh;background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1519750783826-e2420f4d687f'); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; text-align:center;}
+header h1{font-size:60px;margin-bottom:10px; animation:fadeIn 2s ease forwards;}
+header p{font-size:22px;margin-bottom:20px; animation:fadeIn 3s ease forwards;}
+.btn{padding:15px 30px;background:#ff3c00;color:white;text-decoration:none;border-radius:8px;font-size:18px;transition:0.3s;display:inline-block;}
+.btn:hover{background:#ff6a00;transform:scale(1.05);}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+section{padding:70px 20px;text-align:center;}
+.services{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:40px;}
+.card{background:#1c1c1c;padding:30px;width:280px;border-radius:12px;transition:0.3s;position:relative;}
+.card:hover{transform:translateY(-10px);background:#242424;}
+.card h3{color:#ff3c00;margin-bottom:10px;}
+.price{font-size:30px;color:#00ffa6;margin-top:10px;}
+.tire{width:120px;margin:40px auto;animation:spin 5s linear infinite;}
+@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-size:18px;box-shadow:0 0 10px rgba(0,0,0,0.5);}
+footer{background:black;padding:20px;text-align:center;font-size:14px;}
+.testimonials{margin-top:50px;}
+.testimonials h2{margin-bottom:20px;}
+.testimonials .testimonial{background:#222;padding:20px;margin:10px auto;border-radius:10px;max-width:500px;position:relative;animation:fadeUp 1.5s ease forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.map-container{margin-top:50px;display:flex;justify-content:center;}
+.map-container iframe{border:0;width:100%;max-width:600px;height:350px;border-radius:12px;}
 </style>
 </head>
-
 <body>
 
 <header>
-
 <div>
-
 <h1>Mehmet Oto Lastik</h1>
-
 <p>7/24 Yol Yardımı • Hızlı Lastik Tamiri</p>
-
 <a class="btn" href="tel:+905000000000">Hemen Ara</a>
-
 </div>
-
 </header>
 
 <section>
-
 <h2>Hizmetlerimiz</h2>
-
 <img class="tire" src="https://cdn-icons-png.flaticon.com/512/743/743922.png">
-
 <div class="services">
-
 <div class="card">
 <h3>Lastik Patlak Tamiri</h3>
 <p>Profesyonel ekipman ile hızlı onarım.</p>
 <div class="price">250 TL</div>
 </div>
-
 <div class="card">
 <h3>7/24 Yol Yardımı</h3>
 <p>Gece gündüz yolda kaldığınızda geliyoruz.</p>
 </div>
-
 <div class="card">
 <h3>Lastik Değişimi</h3>
 <p>Hızlı ve güvenli lastik değişim hizmeti.</p>
 </div>
-
 </div>
+</section>
 
+<section class="testimonials">
+<h2>Müşteri Yorumları</h2>
+<div class="testimonial">“Hızlı ve güvenilir hizmet, lastiğim anında değişti.” – Ali K.</div>
+<div class="testimonial">“Gece yolda kaldım, 10 dk içinde geldiler. Teşekkürler!” – Ayşe S.</div>
+<div class="testimonial">“Fiyatlar uygun, ekip çok profesyonel.” – Mehmet T.</div>
 </section>
 
 <section>
-
-<h2>Neden Bizi Seçmelisiniz?</h2>
-
-<p style="margin-top:20px; line-height:2;">
-✔ 7/24 Hizmet<br>
-✔ Uygun Fiyat<br>
-✔ Hızlı Müdahale<br>
-✔ Profesyonel Ekip
-</p>
-
-</section>
-
-<section>
-
 <h2>İletişim</h2>
+<p style="margin-top:20px;">📞 Telefon: 0537 342 41 73</p>
+<p>📍 Hatay / Antakya</p>
+<a class="btn" href="tel:+905373424173">Hemen Ara</a>
+</section>
 
-<p style="margin-top:20px;">
-📞 Telefon: 0500 000 00 00
-</p>
-
-<p>
-📍 Hatay / Türkiye
-</p>
-
-<br>
-
-<a class="btn" href="tel:+905000000000">Hemen Ara</a>
-
+<section class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.390803923784!2d36.20134531514251!3d36.16042027998954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1525c5e0f4a6e1e7%3A0x123456789abcdef!2sHatay%2C%20Turkey!5e0!3m2!1sen!2sus!4v1619999999999!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
 </section>
 
 <footer>
-
 © 2026 Mehmet Oto Lastik | 7/24 Yol Yardımı
-
 </footer>
 
 <a class="whatsapp" href="https://wa.me/905000000000">WhatsApp</a>
