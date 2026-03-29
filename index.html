@@ -1,164 +1,92 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mehmet Oto Lastik | 7/24 Yol Yardımı</title>
-<style>
-body {
-  margin:0;
-  font-family:sans-serif;
-  overflow-x:hidden;
-  background: linear-gradient(to bottom, #fdfdfd, #f7f7f7);
-  position:relative;
-}
-
-/* Arka plan lastikleri */
-.tire-bg {
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  z-index:0;
-  overflow:hidden;
-}
-.tire-bg img {
-  position:absolute;
-  width:80px;
-  opacity:0.3;
-  animation:spin linear infinite, floatUpDown ease-in-out infinite;
-}
-.tire-bg img:nth-child(1){top:10%; left:5%; animation-duration:22s, 6s;}
-.tire-bg img:nth-child(2){top:30%; left:70%; animation-duration:28s, 5s;}
-.tire-bg img:nth-child(3){top:60%; left:20%; animation-duration:25s, 7s;}
-.tire-bg img:nth-child(4){top:80%; left:80%; animation-duration:30s, 6.5s;}
-.tire-bg img:nth-child(5){top:50%; left:50%; animation-duration:26s, 5.5s;}
-
-@keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
-}
-@keyframes floatUpDown {
-  0%, 100% { transform: translateY(0);}
-  50% { transform: translateY(-20px);}
-}
-
-/* Header */
-header {
-  position:relative;
-  text-align:center;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  z-index:1;
-}
-header h1 { font-size:50px; margin-bottom:10px;}
-header p { font-size:22px; margin-bottom:20px;}
-.btn {
-  padding:15px 30px;
-  background:#ff3c00;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:18px;
-  transition:0.3s;
-}
-.btn:hover { background:#ff6a00; transform:scale(1.05); }
-
-/* Bölümler */
-section {padding:70px 20px; text-align:center; position:relative; z-index:1;}
-.services {display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:40px;}
-.card {background:#1c1c1c; color:white; padding:30px; width:280px; border-radius:12px; transition:0.3s; position:relative;}
-.card:hover { transform:translateY(-10px); background:#242424; }
-.card h3 { color:#ff3c00; margin-bottom:10px; }
-.price { font-size:30px; color:#00ffa6; margin-top:10px; }
-
-.testimonials .testimonial {
-  background:#222;
-  color:white;
-  padding:20px;
-  margin:10px auto;
-  border-radius:10px;
-  max-width:500px;
-}
-
-footer {
-  background:#111;
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px 20px;
-  border-radius:50px;
-  text-decoration:none;
-  font-size:18px;
-  box-shadow:0 0 10px rgba(0,0,0,0.5);
-  z-index:1;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehmet Oto Lastik | 7/24 Tamir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1578844251758-2f71da34c97f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .tire-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-900 text-white font-sans">
 
-<!-- Arka plan lastikleri -->
-<div class="tire-bg">
-<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
-<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
-<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
-<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
-<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="Tire">
-</div>
+    <header class="hero-bg h-screen flex flex-col items-center justify-center text-center px-4">
+        <div class="mb-6 p-4 bg-yellow-500 rounded-full animate-bounce">
+            <i class="fas fa-tools text-3xl text-black"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4">
+            MEHMET OTO <span class="text-yellow-500">LASTİK</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 font-light max-w-2xl">
+            Yolda kalmayın! Uzman kadromuzla hızlı ve güvenilir çözümler sunuyoruz.
+        </p>
+        
+        <div class="bg-white text-black px-8 py-4 rounded-lg shadow-2xl mb-10 border-l-8 border-yellow-500">
+            <span class="text-sm font-bold uppercase block text-gray-500">Patlak Tamiri</span>
+            <span class="text-4xl font-black">250 TL</span>
+        </div>
 
-<header>
-<h1>Mehmet Oto Lastik</h1>
-<p>7/24 Yol Yardımı • Hızlı Lastik Tamiri</p>
-<a class="btn" href="tel:+905000000000">Hemen Ara</a>
-</header>
+        <a href="tel:05000000000" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-10 rounded-full text-xl transition duration-300 flex items-center">
+            <i class="fas fa-phone-alt mr-3"></i> Hemen Ara
+        </a>
+    </header>
 
-<section>
-<h2>Hizmetlerimiz</h2>
-<div class="services">
-<div class="card">
-<h3>Lastik Patlak Tamiri</h3>
-<p>Profesyonel ekipman ile hızlı onarım.</p>
-<div class="price">250 TL</div>
-</div>
-<div class="card">
-<h3>7/24 Yol Yardımı</h3>
-<p>Gece gündüz yolda kaldığınızda geliyoruz.</p>
-</div>
-<div class="card">
-<h3>Lastik Değişimi</h3>
-<p>Hızlı ve güvenli lastik değişim hizmeti.</p>
-</div>
-</div>
-</section>
+    <section class="py-20 px-6 bg-gray-800">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="tire-card p-8 bg-gray-700 rounded-2xl text-center border-b-4 border-yellow-500">
+                <i class="fas fa-truck-monster text-4xl text-yellow-500 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Hızlı Tamir</h3>
+                <p class="text-gray-400">En modern ekipmanlarla lastiğinizi dakikalar içinde tamir ediyoruz.</p>
+            </div>
+            <div class="tire-card p-8 bg-gray-700 rounded-2xl text-center border-b-4 border-yellow-500">
+                <i class="fas fa-check-circle text-4xl text-yellow-500 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Garantili İşçilik</h3>
+                <p class="text-gray-400">Yaptığımız her yama ve işlem Mehmet Oto Lastik güvencesi altındadır.</p>
+            </div>
+            <div class="tire-card p-8 bg-gray-700 rounded-2xl text-center border-b-4 border-yellow-500">
+                <i class="fas fa-clock text-4xl text-yellow-500 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Uygun Fiyat</h3>
+                <p class="text-gray-400">Kaliteli hizmeti piyasadaki en rekabetçi fiyatlarla sunuyoruz.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="testimonials">
-<h2>Müşteri Yorumları</h2>
-<div class="testimonial">“Hızlı ve güvenilir hizmet, lastiğim anında değişti.” – Ali K.</div>
-<div class="testimonial">“Gece yolda kaldım, 10 dk içinde geldiler. Teşekkürler!” – Ayşe S.</div>
-<div class="testimonial">“Fiyatlar uygun, ekip çok profesyonel.” – Mehmet T.</div>
-</section>
-
-<section>
-<h2>İletişim</h2>
-<p>📞 Telefon: 0537 342 41 73</p>
-<p>📍 Hatay / Antakya, Kuzeytepe mh.</p>
-<a class="btn" href="tel:+905373424173">Hemen Ara</a>
-</section>
-
-<footer>
-© 2026 Mehmet Oto Lastik | 7/24 Yol Yardımı
-</footer>
-
-<a class="whatsapp" href="https://wa.me/905373424173">WhatsApp</a>
+    <footer class="py-16 px-6 bg-black border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">İletişim Bilgileri</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-map-marker-alt text-2xl text-yellow-500 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-xl">Adresimiz</h4>
+                        <p class="text-gray-400">Sanayi Sitesi, 4. Sokak, No: 12<br>Merkez / Şehir</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-phone-square-alt text-2xl text-yellow-500 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-xl">Telefon</h4>
+                        <p class="text-gray-400">05xx xxx xx xx</p>
+                        <p class="text-gray-500 text-sm">7/24 Yol Yardım Mevcuttur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 text-gray-600 text-sm">
+                &copy; 2026 Mehmet Oto Lastik. Tüm Hakları Saklıdır.
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
